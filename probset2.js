@@ -73,16 +73,13 @@ console.log(swapCase('STrings'));
 //3
 var letterCount = function(string){
 	//split string by words
-	var split = [];
-	split = string.split(' ');
+	var split = string.split(' ');
 	//check for duplicate letters in each word
-	for(i = 0; i < split.length; i++){
-		var word = split[i];
-		for(n = 0; n < word.length; n++){
-			if(word[n] === 's'){
-				console.log(word);
-			}
-		}
+	console.log(split)
+	var single = split.split('');
+	for(var i = 0; i < split.length; i++){
+		
+		
 	}
 	
 	return split;
@@ -92,6 +89,14 @@ var letterCount = function(string){
 	//return -1 in no duplicates
 }
 console.log(letterCount("some string of random words"))
+
+
+
+function hasRepeatedLetters(str) {
+    var patt = /^([a-z])\1+$/;
+    var result = patt.test(str);
+    return result;
+}
 
 
 

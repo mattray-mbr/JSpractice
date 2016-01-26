@@ -14,10 +14,7 @@ console.log(totalLetters(['javascript', 'is', 'awesome']))
 
 //3
 var keyValue = function(a, b){
-	var object = {
-		
-	}
-	return object
+	return {[a]:b}
 }
 console.log(keyValue('city', 'denver'));
 
@@ -37,6 +34,7 @@ console.log(negativeIndex(['jerry', 'sarah', 'sally', 'jeff'], -11))
 
 //5
 var removeM = function(string){
+	string = string.toLowerCase()
 	var split = string.split('')
 	for(var i=0; i<split.length;i++){
 		if(split[i] === 'm'){
@@ -59,13 +57,66 @@ var printObject = function(object){
 console.log(printObject({a:10, b:20, c:30}))
 console.log(printObject({firstName: 'pork', lastName: 'chops'}))
 
+//7
+var vowels = function(string){
+	string = string.toLowerCase();
+	var split = string.split('');
+	var vowelsArray = []
+	for(var i=0; i<split.length;i++){
+		if(split[i]==='a' || split[i]==='e' || split[i]==='i' || split[i]==='o' || split[i]==='u'){
+			vowelsArray.push(split[i]);
+		}
+	}
+	return vowelsArray
+}
+console.log(vowels('Alabama'));
+console.log(vowels('What an evil odd dUck whO is big'))
 
+//8
+var twins = function(array){
+	if(array.length%2 !== 0){
+		return false
+	}
+	for(var i=0;i<array.length;i++){
+		for(var n=1; n< array.length; n++){
+			if(array[i] === array[n]){
+				return true
+			}
+		}
+	}
+}
+console.log(twins(['a', 'a', 'b', 'b', 'c', 'c']))
+console.log(twins(['a', 'b', 'c']))
+console.log(twins(['a', 'a', undefined]))
 
+//9
+var or = function(array){
+	for(var i=0;i<array.length;i++){
+		if(array[i] === true){
+			return true
+		} 
+	}
+	return false
+}
+console.log(or([false, false, true, false]))
+console.log(or([false, false, false]))
+console.log(or([]))
 
-
-
-
-
+//10
+var unique = function(array){
+	var uniqueArray = []
+	var extra = {}
+	var i
+	for(i=0; i<array.length;i++){
+		extra[array[i]]=0;
+	}
+	for( i in extra){
+		uniqueArray.push(i);
+	}
+	return uniqueArray
+}
+console.log(unique(['a', 'b', 'c', 'a', 'b', 'd']))
+console.log(unique(['todd', 'avery', 'maria', 'avery']))
 
 
 
