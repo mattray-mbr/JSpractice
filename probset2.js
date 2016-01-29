@@ -1,4 +1,4 @@
-//1
+// --------------------- 1 -------------------------
 var firstReverse = function(string){
 	var split = [];
 	for(var i = 0; i < string.length; i++){
@@ -55,7 +55,7 @@ var seventhReverse = function(string){
 console.log(seventhReverse('logistics'))
 
 
-//2
+// ------------------------- 2 ------------------------
 var swapCase = function(string){
 	var split = []
 	for(i=0; i<string.length; i++){
@@ -70,17 +70,17 @@ var swapCase = function(string){
 console.log(swapCase('STrings'));
 
 
-//3
+// ------------------------ 3 -------------------------
 var letterCount = function(string){
 	//split string by words
 	var split = string.split(' ');
 	//check for duplicate letters in each word
-	console.log(split)
-	var single = split.split('');
-	for(var i = 0; i < split.length; i++){
+	// console.log(split)
+	// var single = split.split('');
+	// for(var i = 0; i < split.length; i++){
 		
 		
-	}
+	// }
 	
 	return split;
 	//compare words that have duplicates
@@ -94,9 +94,25 @@ console.log(letterCount("some string of random words"))
 
 function hasRepeatedLetters(str) {
     var patt = /^([a-z])\1+$/;
-    var result = patt.test(str);
-    return result;
+    return patt.test(str);
 }
+console.log(hasRepeatedLetters("letters"))
+console.log(hasRepeatedLetters("dogyies"))
+
+// var string = "some string of repeating letters";
+// var str = string.split(' ')
+// var tempArry={};
+
+// for (var i=0; i < str.length; i++) {
+//     if (tempArry[str[i]]) {
+//         tempArry[str[i]].push(str[i]);
+//     } else {
+//         tempArry[str[i]] = [];
+//         tempArry[str[i]].push(str[i]);
+//     }
+// }
+
+// console.log(tempArry);
 
 
 
